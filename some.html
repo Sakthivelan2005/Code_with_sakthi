@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Track Timeline</title>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      animation: fadeInAnimation 1s ease forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDownAnimation {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: slideUpAnimation 1s ease forwards;
+    }
+
+    @keyframes slideUpAnimation {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #timeline {
+      width: 96%;
+      height: 250px;
+      padding: 20px;
+      position: fixed;
+    }
+    @media (max-width:600px){
+      #timeline-chart canvas {
+        transform: rotateY(39deg);
+        margin-left: -13%;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+      <div id="timeline"></div>
+   
+ 
+
+  <script>
+    google.charts.load('current', {'packages':['timeline']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var container = document.getElementById('timeline');
+      var chart = new google.visualization.Timeline(container);
+      var dataTable = new google.visualization.DataTable();
+
+      dataTable.addColumn({ type: 'string', id: 'Qualification' });
+      dataTable.addColumn({ type: 'string', id: 'School' });
+      dataTable.addColumn({ type: 'string', role: 'tooltip', 'p': {'html': true} });
+      dataTable.addColumn({ type: 'date', id: 'Start' });
+      dataTable.addColumn({ type: 'date', id: 'End' });
+      dataTable.addRows([
+        ['Secondary School', 'MGR Adarsh School', '<b>SSLC</b><br>MGR Adarsh School<br>In my secondary school till 10th standard I am a average student performed<br> below 60% and I passed out without attend the Exam because of the Dangerous<br> Corona virus spread around the world. That\'s why TN goverment announced all pass <br>on that year.<br><b><i>Start Date</i></b>: June 1 2008<br><b><i>End Date</i></b>: April 30 2021', new Date(2008, 6, 1), new Date(2021, 4, 30)],
+        ['Higher Secondary (Commerce)', 'MGR Adarsh School', '<b>HSC (Commerce)</b><br>MGR Adarsh School<br>In my +1 and +2 Std I Choose Commerce with Business Maths grp and I well performed and I passed out with 92.67%<br><b><i>Start Date</i></b>: May 17 2021<br><b><i>End Date</i></b>: March 30 2023', new Date(2021, 5, 17), new Date(2023, 3, 30)],
+        ['BCA Degree', 'Loyola College', '<b>BCA Degree</b><br>Loyola College<br>I am excited to join in my dream college and I successfully completed my 1st year with 86%.<br><b><i>Start Date: June 28 2023<br><b><i>End Date: April 15 2024</i></b>', new Date(2023, 6, 28), new Date(2024, 4, 15)],
+      ]);
+
+      var options = {
+        timeline: { colorByRowLabel: true },
+        backgroundColor: '#fff',
+      };
+
+      chart.draw(dataTable, options);
+    }
+  </script>
+</body>
+</html>

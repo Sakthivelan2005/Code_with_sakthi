@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Background</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+      position: fixed;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>My Education Background</h1>
+  </header>
+  <section id="education-chart">
+    <h2>Education Chart</h2>
+    <canvas id="educationChart" width="400" height="400"></canvas>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Generate random data for demonstration
+      const educationData = {
+        labels: ['SSLC', 'HSC (Commerce)', 'BCA'],
+        datasets: [{
+          label: 'Years',
+          backgroundColor: ['#007bff', '#28a745', '#ffc107'],
+          borderColor: 'transparent',
+          data: [10, 2, 1] // Replace with your actual education duration in years
+        }]
+      };
+
+      // Configuration for the chart
+      const chartConfig = {
+        type: 'bar',
+        data: educationData,
+        options: {
+          responsive: true,
+          legend: {
+            display: false
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              },
+              scaleLabel: {
+                display: true,
+                labelString: 'Years'
+              }
+            }]
+          }
+        }
+      };
+
+      // Create the chart
+      const educationChartCanvas = document.getElementById('educationChart').getContext('2d');
+      new Chart(educationChartCanvas, chartConfig);
+
+      // Add animation
+      const educationChartSection = document.getElementById('education-chart');
+      educationChartSection.classList.add('animate__animated', 'animate__fadeInUp');
+    });
+  </script>
+</body>
+</html>
