@@ -10,16 +10,19 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-
-        .container {
-            width: 100%;
             height: 100vh;
+            display: flex;
             justify-content: center;
             align-items: center;
             background-color: #f0f0f0;
-            position: fixed;
-  
+        }
+
+        .container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .experience {
@@ -27,14 +30,16 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 100%;
         }
 
         #timeline {
-            height: 400px;
+            height: 100%;
+            width: 100%;
             margin-top: 20px;
         }
         
-       
         /* Custom styling for timeline content bars */
         .vis-item-content {
             color: white;
@@ -48,14 +53,14 @@
         }
 
         .vis-timeline {
-    position: relative;
-    border: 1px solid #bfbfbf;
-    overflow: visible;
-    padding: 100px;
-    margin: 0;
-    box-sizing: border-box;
-    border-radius: 10pxL
-}
+            position: relative;
+            border: 1px solid #bfbfbf;
+            overflow: visible;
+            padding: 20px; /* Reduced padding for better fit */
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
 
         .item-html {
             background-color: #007bff; /* Blue */
@@ -155,12 +160,17 @@
             ]);
 
             var options = {
-        zoomMin: 1000 * 60 * 60 * 24 * 30 * 1, // one week in milliseconds
-        zoomMax: 1000 * 60 * 60 * 24 * 30 * 11 // one years in milliseconds
-    };
+                zoomMin: 1000 * 60 * 60 * 24 * 30 * 1, // one month in milliseconds
+                zoomMax: 1000 * 60 * 60 * 24 * 30 * 11 // eleven months in milliseconds
+            };
 
             // Create a Timeline
             var timeline = new vis.Timeline(document.getElementById('timeline'), items, options);
+
+            // Trigger a resize event after a slight delay to ensure proper rendering
+            setTimeout(function() {
+                window.dispatchEvent(new Event('resize'));
+            }, 0);
         });
     </script>
 </body>
