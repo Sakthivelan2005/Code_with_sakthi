@@ -43,6 +43,9 @@
   border-radius: 10px;
 }
 
+::-webkit-scrollbar-track-piece{
+    background: linear-gradient(135deg, #f36265, #961276);
+}
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(12, 12, 15, 0.655); 
@@ -237,6 +240,12 @@
             margin-bottom: 50px;
         }
 
+        #map iframe{
+            mix-blend-mode: color-burn;
+            width: 100%;
+            
+        }
+
         #scrollUpBtn {
             position: fixed;
             bottom: 20px;
@@ -265,6 +274,7 @@
             animation: fadeIn 1s ease;
             background: rgba(255, 255, 255, 0.9);
             margin: 20px;
+            margin-bottom: 30px;
         }
        
 
@@ -515,9 +525,9 @@ footer{
 
 #map iframe {
             width: 100%;
-            max-width: 300px;
             height: 400px;
             margin-bottom: 50px;
+           
         }
        
  #educationChart{
@@ -660,7 +670,7 @@ footer{
         <div class="contact-info">
             <span><a href="tel:+917305418685"><img src="Images/call_9751691.png" alt="Phone"> +917305418685</a></span>
             <span><a href="mailto:sakthivelan.shankar@gmail.com"><img src="Images/email_10804789.png" alt="Email"> sakthivelan.shankar@gmail.com</a></span>
-            <span><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.5693487527255!2d80.17993576588884!3d13.081598037129348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263fd9366d13d%3A0x4c0acb06d380ea9e!2sRithika%20Beauty%20Parlour!5e0!3m2!1sen!2sin!4v1714173028463!5m2!1sen!2sin"><img src="Images/google-maps_2886372.png" alt="Location"> 10/78, Pattinathar St, J J Nagar East, Mogappair, Chennai.</a></span>
+            <span><a href="https://www.google.com/maps/place/Rithika+Beauty+Parlour/@13.0816652,80.1807868,18.98z/data=!4m6!3m5!1s0x3a5263fd9366d13d:0x4c0acb06d380ea9e!8m2!3d13.0815967!4d80.1805951!16s%2Fg%2F11v0k_nd0d?hl=en&entry=ttu"><img src="Images/google-maps_2886372.png" alt="Location"> 10/78, Pattinathar St, J J Nagar East, Mogappair, Chennai.</a></span>
             <span><a href="#"><img src="Images/october_11484506.png" alt="Birthday"> October 16, 2005</a></span>
         </div>
     </div>
@@ -727,7 +737,8 @@ footer{
         <h2>Contact Me</h2>
         <div id="map">
             <h3>My Location</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.5693487527255!2d80.17993576588884!3d13.081598037129348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263fd9366d13d%3A0x4c0acb06d380ea9e!2sRithika%20Beauty%20Parlour!5e0!3m2!1sen!2sin!4v1714173028463!5m2!1sen!2sin" width="350px" height="450px" style="border:0; border-radius: 20px; width: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.5693487527255!2d80.17993576588884!3d13.081598037129348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5263fd9366d13d%3A0x4c0acb06d380ea9e!2sRithika%20Beauty%20Parlour!5e0!3m2!1sen!2sin!4v1714173028463!5m2!1sen!2sin" height="450px" style=" border: ridge;
+            border-block-end-style: none; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
         </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       <div class="container">

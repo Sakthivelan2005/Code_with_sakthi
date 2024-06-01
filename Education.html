@@ -17,13 +17,9 @@
             background-color: #f0f0f0;
         }
 
-        .container {
-            width: 80%;
-            height: 80%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+       ::-webkit-scrollbar{
+        display: none;
+       }
 
         .experience {
             background-color: #fff;
@@ -99,11 +95,9 @@
     </style>
 </head>
 <body>
-    <div class="container">
         <div class="experience">
             <div id="timeline"></div>
         </div>
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -154,7 +148,7 @@
                     content: '<div>Portfolio Project</div>', 
                     start: '2024-05-20', 
                     end: '2024-06-01', 
-                    title: '<b> Portfolio Project</b> <br>Total Months of Experience: 0.1, <br>Start Date: May 2, 2024,<br> End Date: May 21, 2024,<br> Experience Gained: Portfolio project', 
+                    title: '<b> Portfolio Project</b> <br>Total Months of Experience: 0.1, <br>Start Date: May 20, 2024,<br> End Date: June 01, 2024,<br> Experience Gained: Portfolio project', 
                     className: 'item-portfolio'
                 }
             ]);
