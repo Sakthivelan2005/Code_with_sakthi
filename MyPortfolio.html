@@ -214,11 +214,22 @@
             color: #fff;
         }
 
-        .testimonial cite {
+        .testimonial cite p {
             font-weight: bold;
             color: #fff;
         }
+            
+         cite {
+             display: flex;
+             text-align: center;
+             flex-direction: row-reverse;
+         }
 
+         cite img{
+            width: 68px;
+            height: 68px;
+            border-radius: 36px;
+         }
         .social-media {
             display: inline;
             margin-top: 20px;
@@ -582,6 +593,10 @@ footer{
       display: block;
       margin: 0 auto;
     }
+
+    h4{
+        color: #ccc;
+    }
     
 #education iframe {
     width: 100%;
@@ -611,6 +626,12 @@ footer{
         width: 100%;
     height: 160%;
     border-radius: 20px;
+    }
+
+    cite img {
+        height: 14%;
+        width: 14%;
+
     }
 
 }
@@ -704,21 +725,21 @@ footer{
         <h2>Portfolio</h2>
         <div class="gallery">
             
-            <div class="image"><h3>Real Estate Platform</h3><a href="https://sakthivelan2005.github.io/Real_Estate_Platform/Index.html"><img src="Images/Real Estate Blog.png" alt="Project 1"></a></div>
+            <div class="image"><h3>Real Estate Platform</h3><h4>web development</h4><a href="https://sakthivelan2005.github.io/Real_Estate_Platform/Index.html"><img src="Images/Real Estate Blog.png" alt="Project 1"></a></div>
            
-            <div class="image"> <h3>Portfolio Project</h3><iframe src="MyPortfolio.html" frameborder="5"></iframe></div>
+            <div class="image"> <h3>Portfolio Project</h3><h4>web development</h4><iframe src="MyPortfolio.html" frameborder="5"></iframe></div>
           
         </div>
     </section>
     <section id="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonial">
-            <blockquote>"Amazing work! Highly recommend."</blockquote>
-            <cite>- Client A</cite>
+            <blockquote>"I had the pleasure of working with Sakthi velan, and I can confidently say that their dedication and expertise are unparalleled. Sakthi velan consistently demonstrates a deep understanding of complex concepts, whether it's programming, web development, or problem-solving. "</blockquote>
+            <cite> <p>  Dayanithi natarajan</p><pre>  </pre><img src="Images/Daya.png" alt="Dayanithi"><pre>  </pre><p>-</p></cite>
         </div>
         <div class="testimonial">
-            <blockquote>"Exceeded expectations. Will definitely work together again!"</blockquote>
-            <cite>- Client B</cite>
+            <blockquote>"Beyond technical skills, Sakthivelan exhibits excellent communication and collaboration abilities. They are always ready to lend a helping hand and share their knowledge with the team. Their positive attitude and willingness to take on challenges make them a valuable asset in any project."</blockquote>
+            <cite> <p>Jaidan Ray</p><pre>  </pre><img src="Images/jaidan ray.png" alt="Jaidan"><pre>  </pre><p>-</p></cite>
         </div>
     </section>
     <section id="skills">
