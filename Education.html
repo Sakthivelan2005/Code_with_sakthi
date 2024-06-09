@@ -17,9 +17,13 @@
             background-color: #f0f0f0;
         }
 
-       ::-webkit-scrollbar{
-        display: none;
-       }
+        .container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .experience {
             background-color: #fff;
@@ -45,14 +49,14 @@
             font-weight: bold;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; /* Added for AngularJS */
         }
 
         .vis-timeline {
             position: relative;
             border: 1px solid #bfbfbf;
             overflow: visible;
-            padding: 20px;
+            padding: 20px; /* Reduced padding for better fit */
             margin: 0;
             box-sizing: border-box;
             border-radius: 10px;
@@ -95,9 +99,11 @@
     </style>
 </head>
 <body>
+    <div class="container">
         <div class="experience">
             <div id="timeline"></div>
         </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -139,16 +145,16 @@
                     id: 5, 
                     content: '<div>Real Estate Project</div>', 
                     start: '2024-04-16', 
-                    end: '2024-05-27', 
-                    title: '<b> Real Estate Project</b> <br>Total Months of Experience: 0.5, <br>Start Date: April 16, 2024, <br>End Date: May 27, 2024,<br> Experience Gained: web development', 
+                    end: '2024-06-09', 
+                    title: '<b> Real Estate Project</b> <br>Total Months of Experience: 2, <br>Start Date: April 16, 2024, <br>End Date: June 9, 2024,<br> Experience Gained: Real Estate project', 
                     className: 'item-real-estate'
                 },
                 { 
                     id: 6, 
                     content: '<div>Portfolio Project</div>', 
-                    start: '2024-05-20', 
-                    end: '2024-06-01', 
-                    title: '<b> Portfolio Project</b> <br>Total Months of Experience: 0.1, <br>Start Date: May 20, 2024,<br> End Date: June 01, 2024,<br> Experience Gained: web design', 
+                    start: '2024-05-02', 
+                    end: '2024-06-09', 
+                    title: '<b> Portfolio Project</b> <br>Total Months of Experience: 1, <br>Start Date: May 2, 2024,<br> End Date: June 9, 2024,<br> Experience Gained: Portfolio project', 
                     className: 'item-portfolio'
                 }
             ]);
